@@ -40,7 +40,7 @@ export async function POST(request) {
       message: 'تم إنشاء الموقع بنجاح!',
       url: `/${cleanSubdomain}`,
     });
-  } schema catch (error) {
+  } catch (error) {
     console.error('Error creating site:', error);
     return NextResponse.json(
       { error: 'حدث خطأ أثناء إنشاء الموقع' },
